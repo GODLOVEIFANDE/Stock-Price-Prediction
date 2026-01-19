@@ -57,7 +57,7 @@ server <- function(input, output, session) {
       if (!is.null(result$error)) stop(result$error)
       result
     }, error = function(e) {
-      showNotification(paste("❌ Error:", e$message), type = "error")
+      showNotification(paste(" Error:", e$message), type = "error")
       NULL
     })
   })
@@ -85,4 +85,5 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui = ui, server = server)
+
 
