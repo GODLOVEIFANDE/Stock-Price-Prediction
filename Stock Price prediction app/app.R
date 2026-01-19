@@ -47,7 +47,7 @@ server <- function(input, output, session) {
 
     # Update dropdown
     updateSelectInput(session, "stock", choices = get_stock_list(), selected = stock_name)
-    showNotification(paste("✅ Uploaded", file$name))
+    showNotification(paste(" Uploaded", file$name))
   })
 
   # Reactive prediction call
